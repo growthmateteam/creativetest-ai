@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+/* CreativeTest.ai design system — dark mode only.
+   All colors HSL. Tokens only — never use raw colors in components. */
+
+@layer base {
+  :root {
+    /* Dark mode is the only mode. Tokens defined on :root. */
+    --background: 240 33% 14%;          /* #1A1A2E */
+    --foreground: 230 20% 96%;
+
+    --card: 240 28% 18%;
+    --card-foreground: 230 20% 96%;
+
+    --popover: 240 30% 16%;
+    --popover-foreground: 230 20% 96%;
+
+    --primary: 227 67% 54%;             /* #3B5BDB */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 227 80% 65%;
+
+    --secondary: 258 75% 60%;           /* #7048E8 */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 22% 22%;
+    --muted-foreground: 230 12% 70%;
+
+    --accent: 258 75% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 75% 58%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 60% 48%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 55%;
+    --warning-foreground: 240 33% 14%;
+
+    --border: 240 20% 26%;
+    --input: 240 20% 22%;
+    --ring: 227 67% 54%;
+
+    --radius: 0.75rem;
+
+    /* Brand gradients & shadows */
+    --gradient-primary: linear-gradient(135deg, hsl(227 67% 54%), hsl(258 75% 60%));
+    --gradient-subtle: linear-gradient(135deg, hsl(240 33% 14%), hsl(240 30% 18%));
+    --gradient-glow: radial-gradient(circle at 50% 0%, hsl(258 75% 60% / 0.25), transparent 60%);
+
+    --shadow-glow: 0 10px 40px -10px hsl(227 67% 54% / 0.45);
+    --shadow-elegant: 0 20px 60px -20px hsl(240 60% 4% / 0.6);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 240 30% 12%;
+    --sidebar-foreground: 230 20% 90%;
+    --sidebar-primary: 227 67% 54%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 22% 20%;
+    --sidebar-accent-foreground: 230 20% 96%;
+    --sidebar-border: 240 20% 22%;
+    --sidebar-ring: 227 67% 54%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+}
